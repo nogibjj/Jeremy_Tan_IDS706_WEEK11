@@ -63,5 +63,5 @@ def viz():
     plt.ylabel('Average Seconds Before Next Point')
     plt.title('Average Seconds Before Next Point by Surface Type')
     plt.xticks(rotation=45)
-    plt.show('surface.png')
+    plt.savefig('surface.png')
 
