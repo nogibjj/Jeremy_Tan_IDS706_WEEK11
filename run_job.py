@@ -10,7 +10,7 @@ server_h = os.getenv("SERVER_HOSTNAME")
 url = f'https://{server_h}/api/2.0/jobs/run-now'
 
 headers = {
-    'Authorization': f'Bearer {token}',
+    'Authorization': f'Bearer {access_token}',
     'Content-Type': 'application/json',
 }
 
