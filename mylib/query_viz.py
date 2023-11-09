@@ -1,15 +1,9 @@
 """
 query and viz file
 """
-import requests
+
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import monotonically_increasing_id
-from dotenv import load_dotenv
-import os
 import matplotlib.pyplot as plt
-import requests
-import json
-import base64
 
 # sample query
 def query_transform():
@@ -65,3 +59,6 @@ def viz():
     plt.xticks(rotation=45)
     plt.savefig('surface.png')
 
+if __name__ == "__main__":
+    query_transform()
+    viz()

@@ -1,16 +1,9 @@
 """
-transfrom and load function
+transform and load function
 """
-import requests
+
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import monotonically_increasing_id
-from dotenv import load_dotenv
-import os
-import requests
-import json
-import base64
-
-
 
 def load(dataset="dbfs:/FileStore/mini_project11/event_times.csv", dataset2="dbfs:/FileStore/mini_project11/serve_times.csv"):
     spark = SparkSession.builder.appName("Read CSV").getOrCreate()
@@ -31,6 +24,7 @@ def load(dataset="dbfs:/FileStore/mini_project11/event_times.csv", dataset2="dbf
     num_rows = event_times_df.count()
     print(num_rows)
     
-    return "finished transfrom and load"
+    return "finished transform and load"
 
-    
+if __name__ == "__main__":
+    load()
