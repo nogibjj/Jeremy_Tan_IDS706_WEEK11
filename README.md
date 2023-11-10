@@ -52,10 +52,10 @@ The Data Extraction and Transformation Pipeline project aims to retrieve and pro
 ![viz2](surface.png)
 
 ## References 
-https://github.com/nogibjj/python-ruff-template
-https://hypercodelab.com/docs/spark/databricks-platform/global-env-variables
-https://docs.databricks.com/en/dbfs/filestore.html
-https://learn.microsoft.com/en-us/azure/databricks/delta/
-https://learn.microsoft.com/en-us/training/paths/data-engineer-azure-databricks/
-https://docs.databricks.com/en/getting-started/data-pipeline-get-started.html
+1. https://github.com/nogibjj/python-ruff-template
+2. https://hypercodelab.com/docs/spark/databricks-platform/global-env-variables
+3. https://docs.databricks.com/en/dbfs/filestore.html
+4. https://learn.microsoft.com/en-us/azure/databricks/delta/
+5. https://learn.microsoft.com/en-us/training/paths/data-engineer-azure-databricks/
+6. https://docs.databricks.com/en/getting-started/data-pipeline-get-started.html
 
