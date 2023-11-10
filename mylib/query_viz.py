@@ -47,7 +47,8 @@ def viz():
     plt.xticks(rotation=30, ha='right')  # ha='right' aligns the labels to the right
     plt.tight_layout()  # Ensures proper spacing
     plt.show('server.png')  
-    average_seconds_by_surface = query.groupBy('surface').avg('seconds_before_next_point')
+    average_seconds_by_surface = query.groupBy('surface').avg(
+        'seconds_before_next_point')
 
     df_surface_avg = average_seconds_by_surface.toPandas()
 
