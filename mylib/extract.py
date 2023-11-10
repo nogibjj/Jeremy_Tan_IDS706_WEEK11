@@ -1,5 +1,4 @@
 import requests
-from pyspark.sql import SparkSession
 from dotenv import load_dotenv
 import os
 import json
@@ -16,7 +15,10 @@ url = "https://"+server_h+"/api/2.0"
 
 def perform_query(path, headers, data={}):
     session = requests.Session()
-    resp = session.request('POST', url + path, data=json.dumps(data), verify=True, headers=headers)
+    resp = session.request('POST', url + path, 
+                           data=json.dumps(data), 
+                           verify=True, 
+                           headers=headers)
     return resp.json()
 
 
@@ -53,7 +55,9 @@ def put_file_from_url(url, dbfs_path, overwrite, headers):
         handle = create(dbfs_path, overwrite, headers=headers)['handle']
         print("Putting file: " + dbfs_path)
         for i in range(0, len(content), 2**20):
-            add_block(handle, base64.standard_b64encode(content[i:i+2**20]).decode(), headers=headers)
+            add_block(handle, 
+                      base64.standard_b64encode(content[i:i+2**20]).decode(), 
+                      headers=headers)
         close(handle, headers=headers)
         print(f"File {dbfs_path} uploaded successfully.")
     else:
